@@ -3,7 +3,7 @@
 
 This repository is more or less my startup folder. I use it as a accelerator when I want to start a new website. It comes with the following "features":
 
- - mini a top navigation
+ - mini top navigation with links and social media buttons
  - header area
  - content navigation
  - content area
