@@ -1,0 +1,48 @@
+{
+  "logo":
+  {
+    "src": "imgs/favicon/android-chrome-48x48.png",
+    "claim": "Musclebeaver"
+  },
+  "navigation": [
+    {
+      "headline": "Service",
+      "items": [
+        {
+          "label": "About",
+          "link": "content/about"
+        },
+        {
+          "label": "Impressum",
+          "link": "content/legal"
+        },
+        {
+          "label": "Privacy",
+          "link": "content/Privacy"
+        },
+        {
+          "label": "AGB's",
+          "link": "content/agb"
+        }
+      ]
+    },
+    {
+      "headline": "Partner",
+      "items": [
+        {
+          "label": "Coming soon",
+          "link": "http://www.google.de"
+        }
+      ]
+    },
+    {
+      "headline": "More",
+      "items": [
+        {
+          "label": "Coming soon",
+          "link": "http://www.google.de"
+        }
+      ]
+    }
+  ]
+}

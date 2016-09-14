@@ -1,0 +1,33 @@
+{
+  "label": "Configuration:",
+  "svg": "imgs/svg/config.svg",
+  "items": [
+    {
+      "label": "Shops",
+      "link": "content/shops",
+      "svg": "imgs/svg/shop.svg"
+    },
+    {
+      "label": "Something",
+      "link": "content/sizes",
+      "svg": "imgs/svg/shoe.svg"
+    },
+    {
+      "label": "Data",
+      "link": "content/data",
+      "svg": "imgs/svg/data.svg"
+    }
+  ],
+  "social": [
+    {
+      "icon": "imgs/icons/twitter.svg",
+      "link": "https://twitter.com/ShoeAndU"
+    },
+    {
+      "icon": "imgs/icons/facebook.png",
+      "link": "https://www.facebook.com/shoeandu"
+    }
+  ]
+
+}
+
