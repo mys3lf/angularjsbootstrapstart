@@ -1,0 +1,12 @@
+<ul data-ng-attr-class="{{classes}}" data-ng-attr-aria-labelledby="{{dropdownId}}">
+	<li data-ng-repeat="entry in model track by $index" class="{{entry.children != null && entry.children.length > 0 ? 'dropdown':''}}">
+
+		<a data-ng-attr-href="{{entry.href}}" data-ng-attr-data-toggle="{{entry.children != null && entry.children.length > 0 ? 'dropdown': undefined}}"
+			class="{{entry.children != null && entry.children.length > 0 ? 'dropdown-toggle': undefined}}" data-ng-attr-id="{{entry.children != null && entry.children.length > 0 ? id($index) : undefined}}">{{entry.label}}
+			<span data-ng-if="entry.children != null && entry.children.length > 0" class="caret"></span>
+		</a>
+
+		<navigation-entries data-ng-if="entry.children != null && entry.children.length > 0" dropdown-id="id($index)" classes="'dropdown-menu'"
+			model="entry.children"></navigation-entries>
+	</li>
+</ul>

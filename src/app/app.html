@@ -1,0 +1,41 @@
+﻿<div id="container" class="relative container mobile-container full-height iscroll-on" >
+	<div class="fade-in full-height iscroll-wrapper" id="wrapper" hm-pinch-in="pinchin($event)" hm-pinch-out="pinchout($event)" iscroll>
+		<div class="full-height layout-container iscroll-scroller" id="scroller" style="width: {{data.phases.length * itemWidth}}px">
+			<div data-ng-repeat="item in data.phases" class="item  {{$index == (data.phases.length - 1) ? 'last' : ''}}" post-render ng-attr-style="width: {{itemWidth}}px;">
+				<div class="content" ng-attr-style="margin: 0 {{getItemMargin()}}px">
+					<h2 ng-attr-style="border-color: {{item.color}};"> {{label(item.names)}}
+						<div class="arrow after" ng-attr-style="border-width: {{getItemMargin()* 2}}px; right: -{{getItemMargin()* 3.9}}px; ">
+						</div>
+					</h2>
+
+
+				</div>
+			</div>
+			<div class="grid" style="margin-left: {{getItemMargin()}}px; width:{{getGridWidth()}}px;">
+				<div data-ng-repeat="arrow in data.processes" class="arrow" ng-attr-style="top: {{arrow.row * (rowHeight + rowMargin)}}px; height: {{rowHeight}}px; width: {{data.items.length * itemWidth - 20}}px ">
+					<div class="arrow-container" ng-style="getArrowStyles(arrow)">
+						<!-- ?? for each loop another loop ?? -->
+						<p data-ng-repeat="l in data.processes" hm-tap="arrowClick($event, arrow, data.arrows)" ng-if="arrowIsVisible(arrow, $index)"
+							on-long-press="showProcessBubble($event, arrow, data.processes)" class="arrow-text {{arrow.state == 1 ? 'outofscope': ''}}"
+							ng-style="getArrowLabelStyle(arrow, $index)">
+							{{customLabel(arrow)}}
+						</p>
+
+						<div class="after {{arrow.rtl == true ? 'arrow-left': 'arrow-right'}} {{arrow.releaseIndex != null ? 'release' : ''}}"
+							ng-attr-style="border-color: {{arrow.color}}; background: {{arrow.color}};">
+							<div ng-if="arrow.releaseIndex != null" class="label">{{arrow.align == 'left' ? arrow.releaseIndex : '' }}</div>
+							<div ng-if="arrow.releaseIndex != null" class="square" ng-attr-style="border-color: {{arrow.color}};"></div>
+						</div>
+						<div class="before {{arrow.rtl == true ? 'arrow-left': 'arrow-right'}} {{arrow.releaseIndex != null ? 'release' : ''}}"
+							ng-attr-style="border-color: {{arrow.color}}; background: {{arrow.color}};">
+							<div ng-if="arrow.releaseIndex != null" class="label">{{arrow.align == 'left' ? '': arrow.releaseIndex }}</div>
+							<div ng-if="arrow.releaseIndex != null" class="square" ng-attr-style="border-color: {{arrow.color}}; "></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<bubble ng-model="bubbleModel" action="bubbleClick" on-hide="deactivateBubble"></bubble>
+</div>

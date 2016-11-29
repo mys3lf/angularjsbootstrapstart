@@ -1,0 +1,9 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160922195358",
+    "core-js": "registry:dt/core-js#0.0.0+20160914114559",
+    "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "node": "registry:dt/node#6.0.0+20161010101523"
+  }
+}

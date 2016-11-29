@@ -1,0 +1,17 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "noImplicitAny": true,
+        "outFile": "../../../html-dist/transform.js",
+        "sourceMap": false
+    },
+    "include" : [
+		"*.ts",
+        "*/*.ts"
+    ],
+    "files": [
+        "../../typings/index.d.ts"
+    ]
+}

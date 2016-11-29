@@ -1,0 +1,19 @@
+<footer>
+	<div class="container">
+
+		<div class="col-md-12 headline" ng-if="model.headline != null">
+			<h3><img ng-attr-src="{{model.headline.logo}}" data-ng-if="model.headline != null"><span>{{model.headline.label}}</span></h3>
+		</div>
+
+		<div class="row page-header">
+			<div class="col-md-4" data-ng-repeat="group in model.groups">
+				<h3>{{group.label}}</h3>
+				<ul> 
+					<li data-ng-repeat="item in group.entries" >
+						<a ng-attr-href="{{item.href}}">{{item.label}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
